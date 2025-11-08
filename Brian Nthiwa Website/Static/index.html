@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Nthiwa website</title>
+    <link rel="stylesheet" href="/Static/CSS/style.css">
+</head>
+<body>
+  <header>
+    <h1>Brian Nthiwa Website</h1>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="/Static/home.html" target="_blank">Home</a></li>
+        <li><a href="/Static/about.html" target="_blank">About</a></li>
+        <li><a href="/Static/services.html" target="_blank">Services</a></li>
+        <li><a href="/Static/contacts.html" target="_blank">Contact</a></li>
+        <li><button class="toggle-theme" onclick="toggleTheme()">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <h2>Welcome to My Animated Website</h2>
+    <p>Experience clean, responsive, and user-friendly design — now with Dark Mode!</p>
+    <button class="btn">Explore More</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      We craft interactive and visually appealing websites that adapt seamlessly to your audience — day or night. Our designs are sleek, accessible, and always evolving.
+    </p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Beautiful, responsive websites tailored to your brand identity.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>Boost your online visibility with data-driven SEO strategies.</p>
+      </div>
+      <div class="card">
+        <h3>Maintenance</h3>
+        <p>Keep your website secure, updated, and running smoothly 24/7.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!--footer-->
+<footer>
+    <p>&copy; 2025 Brian Ntiwa Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('active');
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector('.toggle-theme');
+      body.classList.toggle('dark');
+      button.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+  </script>
+</body>
+</html>
